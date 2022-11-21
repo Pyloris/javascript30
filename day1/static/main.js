@@ -33,9 +33,6 @@ for(let drum of drums) {
 
 drums = new Map(mapped);
 
-var audiofile = new Audio('sounds/clap.wav');
-
-
 // function to add and remove alert for wrong key press
 function alertit() {
 
@@ -74,7 +71,7 @@ document.addEventListener("keydown", (event) => {
         drums.get(event.key.toUpperCase()).classList.toggle('playing');
         
         // play the respective audio file
-        audiofile = new Audio(audio_files.get(event.key.toLowerCase()));
+        let audiofile = new Audio(audio_files.get(event.key.toLowerCase()));
         audiofile.play();
     }
     // otherwise alert
